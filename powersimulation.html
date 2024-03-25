@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+box-sizing: border-box;
+min-width: 200px;
+max-width: 980px;
+margin: 0 auto;
+padding: 45px;
+padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="power-simulation-sim-questions">Power Simulation SIM
+questions</h1>
+<p>Christoph Heine 2024-03-25</p>
+<h2 id="feedback-and-accuaracy">Feedback and Accuaracy</h2>
+<p>The power simulation pertaining to feedback seeking and accuracy is
+based on two questions:</p>
+<ul>
+<li>does the feedback increase accuracy immediately after receiving
+feedback?</li>
+<li>does the accuracy for those who receive feedabck decreases over time
+to it’s initial level?</li>
+</ul>
+<p>We simulated the power based on the following path model, using the
+r-package <code>{r} library(lavaan)</code> ### Population model for the
+generation of data</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>pop_mod <span class="ot">&lt;-</span> <span class="st">&quot;</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="st">#effects in both groups</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="st">self_t0 ~ c(.3,.3)*iqtest</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="st">self_t1 ~ c(.3,.6)*iqtest</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="st">self_t2 ~ c(.3,.5)*iqtest</span></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="st">self_t3 ~ c(.3,.4)*iqtest</span></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="st">self_t4 ~ c(.3,.3)*iqtest</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="st">#add covariances of self-perceptions over time (irrespective of iq)</span></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="st">self_t0 ~~ c(.3,.3)*self_t1</span></span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="st">self_t0 ~~ c(.3,.2)*self_t2</span></span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="st">self_t0 ~~ c(.25,.2)*self_t3</span></span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a><span class="st">self_t0 ~~ c(.2,.2)*self_t4</span></span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a><span class="st">self_t1 ~~ c(.3,.3)*self_t2</span></span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a><span class="st">self_t1 ~~ c(.25,.25)*self_t3</span></span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a><span class="st">self_t1 ~~ c(.2,.2)*self_t4</span></span>
+<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a><span class="st">self_t2 ~~ c(.3,.3)*self_t3</span></span>
+<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a><span class="st">self_t2 ~~ c(.25,.25)*self_t4</span></span>
+<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a><span class="st">self_t3 ~~ c(.3,.3)*self_t4</span></span>
+<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a><span class="st">&quot;</span></span>
+<span id="cb1-21"><a href="#cb1-21" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" tabindex="-1"></a>dat   <span class="ot">&lt;-</span> <span class="fu">simulateData</span>(pop_mod, <span class="at">model.type =</span> <span class="st">&quot;sem&quot;</span>, <span class="at">sample.nobs =</span> <span class="fu">c</span>(samplesize<span class="sc">/</span><span class="dv">2</span>,samplesize<span class="sc">/</span><span class="dv">2</span>), <span class="at">group.label =</span> <span class="fu">c</span>(<span class="st">&quot;no_fb&quot;</span>,<span class="st">&quot;fb&quot;</span>))</span></code></pre></div>
+<p>To prevent effects of repeatedly remembering the feedback,
+participants are randomly assigned into three groups who are assessed
+either after two, four, or six months. This is simulated via</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>dat<span class="sc">$</span>condition <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,<span class="fu">nrow</span>(dat),<span class="at">replace =</span> T)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="co">#set self-estimates to missing based on condition</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>dat<span class="sc">$</span>self_t2[dat<span class="sc">$</span>condition <span class="sc">!=</span> <span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>dat<span class="sc">$</span>self_t3[dat<span class="sc">$</span>condition <span class="sc">!=</span> <span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>dat<span class="sc">$</span>self_t4[dat<span class="sc">$</span>condition <span class="sc">!=</span> <span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code></pre></div>
+<h3 id="fitting-model">Fitting model</h3>
+<p>When testing if feedback increased accuracy, we control for selection
+effects. That is, we test whether the increase in accuracy is larger in
+the feedbacl than in the no-feedback condition. This is done by first
+calculating the increases via
+<code>{r} increase_fb   := fb_t1 - fb_t0</code> an then comparing th
+increases via
+<code>{r} diff_increase := increase_fb - increase_nofb</code>.</p>
+<p>To test whether the accuracy decreases in the feedback condition from
+T1 to T4, we compare them via
+<code>{r} decrease_fb := fb_t4 - fb_t1</code></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>fit_mod <span class="ot">&lt;-</span> <span class="st">&quot;</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="st">self_t0 ~ c(nofb_t0,fb_t0)*iqtest</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="st">self_t1 ~ c(nofb_t1,fb_t1)*iqtest</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="st">self_t2 ~ c(nofb_t2,fb_t2)*iqtest</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="st">self_t3 ~ c(nofb_t3,fb_t3)*iqtest</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="st">self_t4 ~ c(nofb_t4,fb_t4)*iqtest</span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="st">increase_fb   := fb_t1 - fb_t0</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="st">increase_nofb := nofb_t1 - nofb_t0</span></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="st">diff_increase := increase_fb - increase_nofb</span></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="st">decrease_fb := fb_t4 - fb_t1</span></span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="st">&quot;</span></span></code></pre></div>
+<h3 id="power-simulation">Power Simulation</h3>
+<p>Data are simulated for samplesizes from 100 to 1000 in 100
+increments, 500 replications each. Nonconvergencies are saved in a
+logfile</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>samplesize <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">100</span>,<span class="dv">1000</span>,<span class="dv">100</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>nrep <span class="ot">&lt;-</span> <span class="dv">500</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>logfile <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">matrix</span>(<span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">nrow =</span> <span class="dv">0</span>, <span class="at">dimnames=</span><span class="fu">list</span>(<span class="cn">NULL</span>,<span class="fu">c</span>(<span class="st">&#39;rep&#39;</span>,<span class="st">&#39;N&#39;</span>,<span class="st">&#39;message&#39;</span>))))</span></code></pre></div>
+<p>Simulation Code</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>result_incr <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>result_decr <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="cf">for</span> (rep <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>nrep) {</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> samplesize) {</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>    errorhandling <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({  </span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>      dat   <span class="ot">&lt;-</span> <span class="fu">simulateData</span>(pop_mod, <span class="at">model.type =</span> <span class="st">&quot;sem&quot;</span>, <span class="at">sample.nobs =</span> <span class="fu">c</span>(i<span class="sc">/</span><span class="dv">2</span>,i<span class="sc">/</span><span class="dv">2</span>), <span class="at">group.label =</span> <span class="fu">c</span>(<span class="st">&quot;no_fb&quot;</span>,<span class="st">&quot;fb&quot;</span>))</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>      </span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>      dat<span class="sc">$</span>condition <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,<span class="fu">nrow</span>(dat),<span class="at">replace =</span> T)</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>      dat<span class="sc">$</span>self_t2[dat<span class="sc">$</span>condition <span class="sc">==</span> <span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>      dat<span class="sc">$</span>self_t3[dat<span class="sc">$</span>condition <span class="sc">==</span> <span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>      dat<span class="sc">$</span>self_t4[dat<span class="sc">$</span>condition <span class="sc">==</span> <span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>      </span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>      mod <span class="ot">&lt;-</span> <span class="fu">sem</span>(fit_mod, <span class="at">data =</span> dat, <span class="at">group =</span> <span class="st">&quot;group&quot;</span>, <span class="at">missing =</span> <span class="st">&quot;fiml&quot;</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a>    },</span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a>    <span class="at">warning =</span> <span class="cf">function</span>(w){w},<span class="at">error =</span> <span class="cf">function</span>(e){e})</span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a>    </span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a>    <span class="cf">if</span>(<span class="fu">inherits</span>(errorhandling,<span class="fu">c</span>(<span class="st">&quot;warning&quot;</span>,<span class="st">&quot;error&quot;</span>))){</span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a>      logfile[<span class="fu">nrow</span>(logfile)<span class="sc">+</span><span class="dv">1</span>,] <span class="ot">&lt;-</span> <span class="fu">c</span>(rep,i,<span class="fu">as.character</span>(errorhandling))</span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a>    } <span class="cf">else</span>{</span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a>      par_temp <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(mod, <span class="at">standardized =</span> T)</span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a>      par_temp<span class="sc">$</span>rep <span class="ot">&lt;-</span> rep</span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a>      par_temp<span class="sc">$</span>N <span class="ot">&lt;-</span> i</span>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a>      result_incr <span class="ot">&lt;-</span> <span class="fu">rbind</span>(result_incr,par_temp[par_temp<span class="sc">$</span>lhs <span class="sc">==</span> <span class="st">&quot;diff_increase&quot;</span>,])</span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a>      result_decr <span class="ot">&lt;-</span> <span class="fu">rbind</span>(result_decr,par_temp[par_temp<span class="sc">$</span>lhs <span class="sc">==</span> <span class="st">&quot;decrease_fb&quot;</span>,])</span>
+<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a>    }</span>
+<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a>  }</span>
+<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="simulation-results">Simulation results</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="co">#Directed hypotheses menes one-tailed power estimates (pvalue &lt; .10)</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>power_incr <span class="ot">&lt;-</span> result_incr <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(N) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">power=</span><span class="fu">sum</span>(pvalue[est <span class="sc">&gt;</span> <span class="dv">0</span>] <span class="sc">&lt;</span> .<span class="dv">1</span>) <span class="sc">/</span> <span class="fu">n</span>())</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>power_decr <span class="ot">&lt;-</span> result_decr <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(N) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">power=</span><span class="fu">sum</span>(pvalue[est <span class="sc">&lt;</span> <span class="dv">0</span>] <span class="sc">&lt;</span> .<span class="dv">1</span>) <span class="sc">/</span> <span class="fu">n</span>())</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>power_incr<span class="sc">$</span>test <span class="ot">&lt;-</span> <span class="st">&quot;increase&quot;</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>power_decr<span class="sc">$</span>test <span class="ot">&lt;-</span> <span class="st">&quot;decrease&quot;</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>power <span class="ot">&lt;-</span> <span class="fu">rbind</span>(power_incr,power_decr)</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="fu">ggplot</span>(power, <span class="fu">aes</span>(<span class="at">x=</span>N, <span class="at">y=</span>power,<span class="at">color =</span> test, <span class="at">group=</span>test)) <span class="sc">+</span></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept=</span>.<span class="dv">80</span>, <span class="at">linetype=</span><span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span></span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>,<span class="st">&quot;green&quot;</span>)) <span class="sc">+</span> </span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">&quot;sample size&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="fu">bquote</span>(<span class="st">&quot;1 -&quot;</span> <span class="sc">*</span>beta))</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<h2 id="sim-and-self-insight-over-time">SIM and Self-Insight over
+time</h2>
+<p>The power simulation pertaining to the interplay of the SIM with
+subjectively perceived self-insigth over time is based on the random
+intercept cross-lagged panel model described by Hamaker et al. (2015).
+Mulder (2023) developed an r-pacakge
+``<code>{r} library(powRICLPM)</code> to simulate the power for each of
+the models components.</p>
+<p>We based the simulation on within person cross-lagged effects of
+.15/-.15. Data are simulated for samplesizes from 100 to 1000 in 100
+increments, 500 replications each. We added a medium amount of
+individual differences via an ICC of .60.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>Phi <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(.<span class="dv">4</span>, <span class="sc">-</span>.<span class="dv">15</span>, .<span class="dv">15</span>, .<span class="dv">4</span>), <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">byrow =</span> T)</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>out <span class="ot">&lt;-</span> <span class="fu">powRICLPM</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>  <span class="at">target_power =</span> <span class="fl">0.8</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>  <span class="at">search_lower =</span> <span class="dv">100</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>  <span class="at">search_upper =</span> <span class="dv">1000</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  <span class="at">search_step  =</span> <span class="dv">100</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>  <span class="at">time_points  =</span> <span class="dv">4</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>  <span class="at">ICC          =</span> <span class="fl">0.60</span>,</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>  <span class="at">RI_cor       =</span> <span class="fl">0.00</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>  <span class="at">Phi          =</span> Phi,</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>  <span class="at">within_cor   =</span> <span class="fl">0.00</span>,</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>  <span class="at">reps         =</span> <span class="dv">500</span>,</span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>  <span class="at">seed         =</span> <span class="dv">123456</span></span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a>)</span></code></pre></div>
+<p>The simulation results</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">summary</span>(out, <span class="at">parameter =</span> <span class="st">&quot;wB2~wA1&quot;</span>)</span></code></pre></div>
+<pre><code>## Results for wB2~wA1 across conditions:
+## 
+##     N    T   ICC   Err   NC   IR     PV      Avg      Min   SD   SE Avg     MSE   Accuracy   Coverage   Power
+## -----  ---  ----  ----  ---  ---  -----  -------  -------  ---  -------  ------  ---------  ---------  ------
+##   100    4   0.5     0    0    0   0.15   -0.113   -0.113   NA    0.199   0.069      0.781          1       0
+##   200    4   0.5     0    0    0   0.15    0.215    0.215   NA    0.122   0.004      0.477          1       0
+##   300    4   0.5     0    0    0   0.15    0.082    0.082   NA    0.090   0.005      0.353          1       0
+##   400    4   0.5     0    0    0   0.15    0.170    0.170   NA    0.070   0.000      0.273          1       1
+##   500    4   0.5     0    0    0   0.15    0.165    0.165   NA    0.071   0.000      0.278          1       1
+##   600    4   0.5     0    0    0   0.15    0.134    0.134   NA    0.063   0.000      0.246          1       1
+##   700    4   0.5     0    0    0   0.15    0.234    0.234   NA    0.045   0.007      0.177          1       1
+##   800    4   0.5     0    0    0   0.15    0.105    0.105   NA    0.049   0.002      0.194          1       1
+##   900    4   0.5     0    0    0   0.15    0.176    0.176   NA    0.045   0.001      0.177          1       1
+##  1000    4   0.5     0    0    0   0.15    0.129    0.129   NA    0.047   0.000      0.182          1       1</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">summary</span>(out, <span class="at">parameter =</span> <span class="st">&quot;wA2~wB1&quot;</span>)</span></code></pre></div>
+<pre><code>## Results for wA2~wB1 across conditions:
+## 
+##     N    T   ICC   Err   NC   IR      PV      Avg      Min   SD   SE Avg     MSE   Accuracy   Coverage   Power
+## -----  ---  ----  ----  ---  ---  ------  -------  -------  ---  -------  ------  ---------  ---------  ------
+##   100    4   0.5     0    0    0   -0.15   -0.351   -0.351   NA    0.148   0.041      0.581          1       1
+##   200    4   0.5     0    0    0   -0.15   -0.314   -0.314   NA    0.117   0.027      0.458          1       1
+##   300    4   0.5     0    0    0   -0.15   -0.190   -0.190   NA    0.080   0.002      0.314          1       1
+##   400    4   0.5     0    0    0   -0.15   -0.151   -0.151   NA    0.063   0.000      0.247          1       1
+##   500    4   0.5     0    0    0   -0.15   -0.104   -0.104   NA    0.059   0.002      0.231          1       0
+##   600    4   0.5     0    0    0   -0.15   -0.197   -0.197   NA    0.064   0.002      0.251          1       1
+##   700    4   0.5     0    0    0   -0.15   -0.140   -0.140   NA    0.053   0.000      0.210          1       1
+##   800    4   0.5     0    0    0   -0.15   -0.110   -0.110   NA    0.048   0.002      0.187          1       1
+##   900    4   0.5     0    0    0   -0.15   -0.098   -0.098   NA    0.053   0.003      0.210          1       0
+##  1000    4   0.5     0    0    0   -0.15   -0.105   -0.105   NA    0.048   0.002      0.190          1       1</code></pre>
+<p>Demonstration that (1) the crossectional correlation of SIM and SI is
+zero and that (2) the stability of personality traits is in the expected
+range (.80 correlation over two monthts, .60 correlation over 6
+months)</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>mod <span class="ot">&lt;-</span> out<span class="sc">$</span>conditions[[<span class="dv">1</span>]]<span class="sc">$</span>pop_synt</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>testdat <span class="ot">&lt;-</span> <span class="fu">simulateData</span>(mod, <span class="at">model.type =</span> <span class="st">&quot;growth&quot;</span>, <span class="at">meanstructure =</span> T, <span class="at">sample.nobs =</span> <span class="dv">10000</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">cor</span>(testdat), <span class="at">digits =</span> <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##       A1    A2    A3    A4    B1    B2    B3    B4
+## A1  1.00  0.70  0.57  0.52 -0.01  0.07  0.05  0.02
+## A2  0.70  1.00  0.70  0.57 -0.09  0.00  0.07  0.05
+## A3  0.57  0.70  1.00  0.70 -0.07 -0.08 -0.01  0.07
+## A4  0.52  0.57  0.70  1.00 -0.04 -0.06 -0.08 -0.01
+## B1 -0.01 -0.09 -0.07 -0.04  1.00  0.69  0.57  0.53
+## B2  0.07  0.00 -0.08 -0.06  0.69  1.00  0.70  0.58
+## B3  0.05  0.07 -0.01 -0.08  0.57  0.70  1.00  0.70
+## B4  0.02  0.05  0.07 -0.01  0.53  0.58  0.70  1.00</code></pre>
+
+</body>
+</html>
